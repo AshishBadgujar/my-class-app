@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import List from '../partials/List';
 
 export default function Stds() {
+    const [stds, setStds] = useState([
+        "1st", "2nd"
+    ]);
+
     return (
-        <div>Stds</div>
-    )
+        <>
+            <List list={stds} setList={setStds} title="Standard" />
+        </>
+    );
 }

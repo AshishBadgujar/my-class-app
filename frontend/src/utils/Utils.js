@@ -1,4 +1,6 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
+import axios from 'axios'
+import { cloudinaryConfig } from './config';
 
 export const tailwindConfig = () => {
   // Tailwind config
@@ -27,3 +29,21 @@ export const formatValue = (value) => Intl.NumberFormat('en-US', {
   maximumSignificantDigits: 3,
   notation: 'compact',
 }).format(value);
+
+
+
+export async function uploadToCloudinary(pdfFile) {
+  const { cloud_name } = cloudinaryConfig;
+
+  const formData = new FormData();
+  formData.append('file', pdfFile);
+  formData.append('upload_preset', 'my-class');
+
+  try {
+    const response = await axios.post(`https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`, formData);
+    return response.data.url;
+  } catch (error) {
+    console.error('Error uploading PDF to Cloudinary:', error.message);
+    return null;
+  }
+}

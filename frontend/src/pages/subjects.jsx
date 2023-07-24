@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import List from '../partials/List';
 
 export default function Subjects() {
+    const [subjects, setSubjects] = useState([
+        "english", "math"
+    ]);
+
     return (
-        <div>Subjects</div>
-    )
+        <>
+            <List list={subjects} setList={setSubjects} title="Subject" />
+        </>
+    );
 }

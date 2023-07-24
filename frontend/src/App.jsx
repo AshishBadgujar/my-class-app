@@ -5,7 +5,7 @@ import {
   useLocation
 } from 'react-router-dom';
 import './css/style.css';
-import './charts/ChartjsConfig';
+// import './charts/ChartjsConfig';
 import Home from './pages/home';
 import Layout from './components/Layout';
 import Homework from './pages/homework';
