@@ -188,7 +188,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3 my-4">
               <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">Settings</span>
             </h3>
-            <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('subjects') && 'bg-slate-900'}`}>
+            {/* <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('subjects') && 'bg-slate-900'}`}>
               <NavLink
                 end
                 to="/subjects"
@@ -208,7 +208,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   </span>
                 </div>
               </NavLink>
-            </li>
+            </li> */}
             <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('schools') && 'bg-slate-900'}`}>
               <NavLink
                 end

@@ -5,7 +5,6 @@ import {
   useLocation
 } from 'react-router-dom';
 import './css/style.css';
-// import './charts/ChartjsConfig';
 import Home from './pages/home';
 import Layout from './components/Layout';
 import Homework from './pages/homework';
@@ -14,15 +13,9 @@ import Admission from './pages/admission'
 import Subjects from './pages/subjects';
 import Schools from './pages/schools';
 import Stds from './pages/stds';
+import SendWp from './pages/sendWp';
 
 function App() {
-  // const location = useLocation();
-
-  // useEffect(() => {
-  //   document.querySelector('html').style.scrollBehavior = 'auto'
-  //   window.scroll({ top: 0 })
-  //   document.querySelector('html').style.scrollBehavior = ''
-  // }, [location.pathname]);
 
   return (
     <>
@@ -35,6 +28,7 @@ function App() {
           <Route exact path="/subjects" element={<Subjects />} />
           <Route exact path="/schools" element={<Schools />} />
           <Route exact path="/stds" element={<Stds />} />
+          <Route exact path="/send-wp/:fileName" element={<SendWp />} />
         </Routes>
       </Layout>
     </>

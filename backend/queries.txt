@@ -1,0 +1,9 @@
+getAllStds
+getAllSchools
+getAllStudents
+
+createStudent
+createSchool
+createStds
+createHomework
+createTest
